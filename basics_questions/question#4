@@ -1,0 +1,28 @@
+//Ask the user to enter three numbers: x, y, and z.
+//Check whether x can be divided by:
+//y only
+//z only
+//both y and z
+
+//Display the correct message based on the result.
+
+ var x = Number(window.prompt("enter the first value"));
+ var y = Number(window.prompt("enter the second value"));
+ var z = Number(window.prompt("enter the third value"));
+
+ if(x%y==0 && x%z==0)
+ {
+    window.alert(x+"is divisible by both"+y+"and"+z);
+ }
+ else if(x%y==0)
+ {
+    window.alert(x+"is divisible by "+y);
+ }
+ else if(x%z==0)
+ {
+    window.alert(x+"is divisible by "+z);
+ }
+ else
+ {
+    window.alert(x+"is not divisible by both"+y+"and"+z);
+ }
