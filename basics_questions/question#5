@@ -1,0 +1,39 @@
+//Write a program that takes two numbers representing a range.
+//Within this range, the program should:
+//List all numbers divisible by 3
+//List all numbers divisible by 5
+//Calculate and display the sum of all these numbers
+
+//Example:
+//Input: 1, 10
+//Output:
+//Multiples of 3: 3, 6, 9
+//Multiples of 5: 5, 10
+//Total sum: 33
+
+ var x = Number(window.prompt("enter the first value"));
+ var y = Number(window.prompt("enter the second value"));
+
+ var s="multiples of 3 : ";
+ var s2="multiples of 5 : ";
+ var sum=0;
+ for(var i=x;i<=y;i++)
+ {
+    if(i%3==0)
+    {
+        s+=i;
+        s+=',';
+        sum+=i;
+    }
+    
+    if(i%5==0)
+    {
+        s2+=i;
+        s2+=',';
+        sum+=i;
+    }
+
+ }
+console.log(s);
+console.log(s2);
+console.log("sum : ", sum);
