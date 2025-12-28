@@ -1,0 +1,9 @@
+// Ask the user to type a text message. Display this message using all HTML heading levels from h1 to h6 by using a loop.
+// ⚠️ You are not allowed to write <h1>, <h2>, … <h6> directly in the code.
+
+var msg = window.prompt("enter your message");
+for(var i=1;i<=6;i++)
+{
+    // document.write(`<h${i}>${msg}</h${i}>`);
+    document.write("<h"+i+">"+msg+"</h"+i+">");
+}
