@@ -1,0 +1,52 @@
+// Ask the user to enter three values:
+// x and y → numbers
+// z → a string
+
+// Based on the value of z, display numbers between x and y as follows:
+// If z = "odd" → show only odd numbers
+// If z = "even" → show only even numbers
+// If z = "no" → show all numbers
+
+// Include x and y if they match the condition.
+// Validate that the user entered the correct data types, otherwise ask them to re-enter.
+// Display the numbers and their sum in the console with formatting.formatting.
+
+var x, y, z;
+
+do 
+{
+    x = Number(prompt("enter value x "));
+    y = Number(prompt("enter value y "));
+    z = prompt("enter value z ");
+} 
+while (
+    !isFinite(x) ||!isFinite(y) ||(z!="even" && z!="odd" && z!="no"));
+
+var sum = 0;
+var ans="";
+for (var i=x;i<=y;i++) {
+
+    if (
+        z == "no" ||
+        (z == "odd" && i % 2 != 0) ||
+        (z == "even" && i % 2 == 0)
+    ) {
+        ans+=i;
+        ans+=',';
+        sum += i;
+    }
+}
+
+console.log(
+    "%coutput : ",
+    "color: blue; font-weight: bold;"
+);
+console.log(
+    "%c" + ans,
+    "color: green;"
+);
+
+console.log(
+    "%csum = " + sum,
+    "color: red; font-weight: bold;"
+);
