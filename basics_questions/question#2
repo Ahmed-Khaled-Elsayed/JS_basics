@@ -1,0 +1,23 @@
+//Write a program that keeps asking the user to enter numbers and calculates their total.
+
+//The program should stop taking input when:
+//The user enters 0 ornThe total sum becomes greater than 100
+
+//Make sure the entered value is a number.
+//Finally, print the total sum in the console.
+
+
+var sum=0;
+while(sum<=100)
+{
+    var x= window.prompt("enter a value");
+    while(!isFinite(x))
+    {
+        x = window.prompt("enter a numeric  value");
+    }
+    if(x==0)
+        break;
+    sum+=Number(x);
+
+} 
+console.log("sum :",sum);
