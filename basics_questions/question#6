@@ -1,0 +1,15 @@
+//Ask the user to enter a number that represents the number of rows.
+//Print a star pattern where each row contains stars equal to its row number.
+
+  var x = Number(window.prompt("enter the num of rows"));
+
+  for(var i=1;i<=x;i++)
+  {
+    var y=i
+    while(y--)
+    {
+       document.write("*")
+    }
+
+    document.write("<br>")
+  }
