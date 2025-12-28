@@ -1,0 +1,6 @@
+//Using the ternary operator, write a script that takes two numbers from the user and prints the larger number.
+
+var x = Number(window.prompt("enter the first value"));
+var y = Number(window.prompt("enter the second value"));
+
+window.alert("the max value :"+((x>y)?x:y));
