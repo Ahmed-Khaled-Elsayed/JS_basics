@@ -1,0 +1,11 @@
+//Ask the user to enter a text using a prompt.
+//Then ask the user to enter one character to search for inside the text.
+//The program should also ask whether uppercase and lowercase letters should be treated as different or not.
+//Finally, display how many times the chosen character appears in the text.
+
+var str = prompt("enter the string");
+var ch = prompt("enter char to count");
+var s = confirm("case sensitive");
+
+var sub = s?str.split(ch):str.toLowerCase().split(ch);
+alert("count of "+ch+" is "+(sub.length-1));
