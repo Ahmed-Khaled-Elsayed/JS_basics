@@ -1,0 +1,32 @@
+//Create a parent window that opens a child window.
+//The child window should:
+//Always stay on top
+//Move right and left within the screen limits
+//The parent window must contain a button that stops the child window’s movement.
+
+
+let newWin = window.open("/win.html", "newWin", "left=0,top=0,width=200,height=200");
+
+let f=0,dis=0,step=0;
+let interval = setInterval(function(){
+
+    if(dis+newWin.innerWidth>=screen.availWidth)
+    {
+        f=1;
+        step=-70;
+    }
+    if(dis==0)
+    {
+         f=0;
+         step=70;
+    } 
+    f?newWin.moveBy(step,0):newWin.moveBy(step,0); 
+    dis+=step;    
+    
+},400)
+
+function myFun()    //this function will be called by onClick event on the buttoon in the html file
+{
+    clearInterval(interval);
+    newWin.focus();
+}
