@@ -1,0 +1,29 @@
+//Create a function named showAddr that receives an address object containing:
+//street, buildingNum, and city.
+//The function should return a full address string that also includes the registration date.
+
+//Example:
+//If
+//addrObj = { street: "new st.", buildingNum: 15, city: "newCity" }
+//Calling
+//showAddr(addrObj)
+//Returns:
+//15 new st., newCity city registered in 15/10/2024
+
+
+
+function showAddr(addObj)
+{
+    let street = addObj.street;
+    let buildNo = addObj.buildingNum;
+    let city = addObj.city;
+
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth()+1;
+        let year = date.getFullYear();
+        
+    return buildNo+" "+street+","+city+" city"+" registered in "+day+"/"+month+"/"+year;
+}
+
+console.log( showAddr({street:"shoubra st.",buildingNum:15,city:"cairo"}));
