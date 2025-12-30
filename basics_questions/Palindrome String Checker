@@ -1,0 +1,26 @@
+//Ask the user to enter a word or sentence using a prompt.
+//Then ask the user (using a confirm dialog) whether letter case should be considered.
+//The program should check if the entered text is a palindrome and display the result.
+
+//Words like RADAR, NOON, and MOOM are palindromes.
+//raDaR is not a palindrome if case sensitivity is enabled,
+//but it is a palindrome if case sensitivity is ignored.
+
+var str = prompt("enter the string");
+var s = confirm("case sensitive");
+
+var str2=str.split('').reverse().join('');
+
+if(!s)
+{
+    str=str.toLowerCase();
+    str2=str2.toLowerCase();
+}
+if(str==str2)
+{
+    alert(str+" is palindrome");
+}
+else
+{
+    alert(str+" isn't palindrome");
+}
