@@ -1,0 +1,16 @@
+//Write a script that asks the user to perform the following calculations:
+
+//1)Enter the radius of a circle to calculate and display its area
+//2)Enter a number to calculate its square root and show the result in an alert
+//3)Enter an angle to calculate its cosine value, then print the result in the console
+
+var radius = prompt("enter circle radius");
+var area = Math.PI * radius*radius;
+alert("circle area is : "+ area);
+
+var val = prompt("enter value")
+alert("square root is :"+Math.sqrt(val));
+
+var deg = prompt("enter angle degree");
+var rad = deg*(Math.PI/180);
+alert("cos( "+deg+" ) is "+Math.cos(rad));
