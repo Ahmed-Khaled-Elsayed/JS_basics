@@ -1,0 +1,11 @@
+//Create a parent window that opens a child window showing scrolling advertisement content.
+
+
+let newWin = window.open("/win2.html", "newWin", "left=0,top=0,width=500,height=500");
+
+let interval = setInterval(function(){
+    newWin.scrollBy({
+  top: 10, 
+  behavior: 'smooth' 
+})
+},100)
