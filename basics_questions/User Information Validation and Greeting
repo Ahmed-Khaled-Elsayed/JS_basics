@@ -1,0 +1,48 @@
+//Write a script that asks the user to enter their personal information (name,phone number , email).
+//Validate the entered data, then display a welcome message.
+//The user should choose a text color (red, green, or blue) using a prompt, and the message should be displayed using the selected color.
+
+
+var nameReg=/^[a-zA-Z]{3,}$/;
+var phoneReg=/^[0-9]{8}$/;
+var mobileReg=/^01(0|1|2|5)[0-9]{8}$/;
+var emailReg=/^[a-zA-Z0-9._%+-]{2,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+var userName = prompt("enter your name");
+while(!nameReg.test(userName))
+{
+    userName = prompt("invalid name format, enter your name");
+}
+var phoneNum = prompt("enter phone number");
+while(!phoneReg.test(phoneNum))
+{
+    phoneNum = prompt("invalid phone format, enter phone number");
+}
+var mobileNum = prompt("enter mobile number");
+while(!mobileReg.test(mobileNum))
+{
+    mobileNum = prompt("invalid mobile format, enter mobile number");
+}
+var email = prompt("enter email");
+while(!emailReg.test(email))
+{
+    email = prompt("invalid email format, enter email number");
+}
+
+var color = prompt("choose color to print your data (red,green,blue)");
+console.log(
+    "%cname : "+userName,
+    "color: "+color+"; font-weight: bold;"
+);
+console.log(
+    "%cphoneNum : "+phoneNum,
+    "color: "+color+"; font-weight: bold;"
+);
+console.log(
+    "%cmobileNum : "+mobileNum,
+    "color: "+color+"; font-weight: bold;"
+);
+console.log(
+    "%cemail : "+email,
+    "color: "+color+"; font-weight: bold;"
+);
