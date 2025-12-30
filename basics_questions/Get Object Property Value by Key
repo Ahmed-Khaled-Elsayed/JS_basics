@@ -1,0 +1,11 @@
+//Create a function called dispVal that accepts:
+//An object with two properties
+//A string representing one of the object’s keys
+
+//The function should return the value of the property whose key matches the given string.
+
+function dispVal(obj,key)
+{
+    return obj[key];
+}
+console.log(dispVal({name:"ahmed",age:24},"name"));
