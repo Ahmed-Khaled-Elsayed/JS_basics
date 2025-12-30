@@ -1,0 +1,20 @@
+//Create a function that receives one string as a parameter.
+//The function should return the longest word in the string.
+//If two or more words have the same maximum length, return the first one that appears.
+
+//Example:
+//Input: "this is a javascript string demo"
+//Output: javascript
+
+var str = prompt("enter the string");
+
+str = str.split(" ");
+var mx="";
+for(var i=0;i<str.length;i++)
+{
+    if(str[i].length>mx.length)
+    {
+        mx=str[i];
+    }
+}
+alert(mx);
